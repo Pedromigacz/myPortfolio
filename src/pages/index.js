@@ -4,7 +4,9 @@ import '../styles.css'
 
 const Index = () => {
   return (
-    <Home />
+    <>
+      <Home />
+    </>
   )
 }
 
