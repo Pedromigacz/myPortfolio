@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&display=swap');
+
+:root {
+    box-sizing: border-box;
+    color: #f4f4f4;
+}
+
+* {
+    margin: 0;
+    box-sizing: inherit;
+    font-weight: 400;
+}
+
+body {
+    background: linear-gradient(81.81deg, #040404 13.09%, #0A1C34 248.66%);
+}
