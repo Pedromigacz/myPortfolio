@@ -10,5 +10,6 @@
 }
 
 body {
+    height: 300vh;
     background: linear-gradient(81.81deg, #040404 13.09%, #0A1C34 248.66%);
 }

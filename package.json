@@ -16,6 +16,7 @@
   },
   "license": "0BSD",
   "dependencies": {
+    "framer-motion": "^2.9.5",
     "gatsby": "^2.26.1",
     "gatsby-plugin-postcss": "^3.3.0",
     "gatsby-source-strapi": "0.0.12",
