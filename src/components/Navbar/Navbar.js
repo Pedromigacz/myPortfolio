@@ -17,17 +17,17 @@ const Navbar = () => {
             <img src={Logo} />
             <ul>
                 <li>Home</li>
-                <li>Trabalhos</li>
+                <li className={styles.crossed}>Trabalhos</li>
                 <li>Sobre mim/currículo</li>
                 <li>Contato</li>
             </ul>
             <AnimatePresence>
                 {scrolled && <motion.hr
                     key="navRuler"
-                    initial={{ x: -2000 }}
-                    animate={{ x: 0 }}
-                    exit={{ x: -2000 }}
-                    transition={{ duration: 0.4, type: "tween" }}
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: 20, opacity: 0 }}
+                    transition={{ duration: 0.2, ease: 'easeOut'}}
                 />}
             </AnimatePresence>
         </nav>

@@ -52,3 +52,8 @@ nav.navbar hr {
     line-height: 1rem;
     margin: 0 1rem;
 }
+
+.crossed {
+    color: #555;
+    text-decoration: line-through;
+}
