@@ -6,6 +6,7 @@
 .homeContainer h1 {
     display: inline-block;
     font-family: 'Roboto Mono', sans-serif;
+    font-weight: 300;
     font-size: 3.5rem;
     line-height: 60px;
     margin: 15% 0 0 4rem;
@@ -13,4 +14,5 @@
 
 .homeContainer h1 strong {
     color: #89023E;
+    font-weight: 400;
 }

@@ -1,10 +1,11 @@
 import React from 'react'
-import { Home } from '../components'
+import { Home, Navbar } from '../components'
 import '../styles.css'
 
 const Index = () => {
   return (
     <>
+      <Navbar />
       <Home />
     </>
   )

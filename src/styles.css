@@ -1,12 +1,15 @@
 :root {
     box-sizing: border-box;
     color: #f4f4f4;
+    font-weight: 400;
 }
 
 * {
     margin: 0;
     box-sizing: inherit;
-    font-weight: 400;
+    font-weight: inherit;
+    padding: 0;
+    list-style: none;
 }
 
 body {
