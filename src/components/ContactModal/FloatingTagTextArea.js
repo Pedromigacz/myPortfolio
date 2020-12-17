@@ -6,6 +6,7 @@ const FloatingTagInput = ({styles, label, inputKey, handleChange, form}) => {
     return (
         <span className={styles.inputContainer}>
             <motion.label
+                initial={{ y: 32 }}
                 animate={{ y: (form[inputKey] || labelFocused) ? 10 : 32 }}
             >{label}</motion.label>
             <textarea

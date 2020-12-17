@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './ContactModal.module.css'
 import FloatingTagInput from './FloatingTagInput'
 import FloatingTagTextArea from './FloatingTagTextArea'
@@ -16,6 +16,11 @@ const ContactModal = ({ setShowContactModal }) => {
         e.preventDefault()
         console.log(e)
     }
+
+    useEffect(() => {
+        document.querySelector('body').style.overflow = 'hidden'
+        return () => {document.querySelector('body').style.overflow = 'unset'}
+    }, [])
 
     return (
         <div className={styles.backDrop}>
