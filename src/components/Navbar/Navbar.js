@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <>
         <nav className={`${styles.navbar} ${scrolled && styles.scrolled}`}>
-            <img src={Logo} />
+            <img src={Logo} alt="PedroMigacz"/>
             <ul>
                 <li>Home</li>
                 <li className={styles.crossed}>Trabalhos</li>

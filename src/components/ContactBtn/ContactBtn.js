@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ContactBtn.module.css'
 import { AnimateSharedLayout, motion } from 'framer-motion'
+import { ContactModal } from '../'
 
 const contactVariants = {
     initial: {
@@ -23,6 +24,7 @@ const contactVariants = {
 
 const ContactBtn = () => {
     const [scrolled, setScrolled] = useState(false)
+    const [showContactModal, setShowContactModal] = useState(false)
 
     const handleScroll = () => {
         if(window.scrollY > 300) setScrolled(true)
@@ -36,6 +38,7 @@ const ContactBtn = () => {
     }, [])
 
     return (
+        <>
         <AnimateSharedLayout type="crossfade">  
             <motion.button
                 layout
@@ -43,8 +46,11 @@ const ContactBtn = () => {
                 variants={contactVariants}
                 initial={false}
                 animate={scrolled ? "animate" : "initial"}
+                onClick={e => setShowContactModal(true)}
             >{scrolled ? '@' : 'Entre em contato'}</motion.button>
         </AnimateSharedLayout>
+        {showContactModal && <ContactModal setShowContactModal={setShowContactModal}/>}
+        </>
     );
 }
  
