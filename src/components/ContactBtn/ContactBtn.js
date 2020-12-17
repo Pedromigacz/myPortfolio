@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ContactBtn.module.css'
-import { AnimateSharedLayout, motion } from 'framer-motion'
+import { AnimateSharedLayout, motion, AnimatePresence } from 'framer-motion'
 import { ContactModal } from '../'
 
 const contactVariants = {
@@ -49,7 +49,9 @@ const ContactBtn = () => {
                 onClick={e => setShowContactModal(true)}
             >{scrolled ? '@' : 'Entre em contato'}</motion.button>
         </AnimateSharedLayout>
-        {showContactModal && <ContactModal setShowContactModal={setShowContactModal}/>}
+        <AnimatePresence exitBeforeEnter>
+            {showContactModal && <ContactModal setShowContactModal={setShowContactModal}/>}
+        </AnimatePresence>
         </>
     );
 }

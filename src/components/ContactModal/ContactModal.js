@@ -2,6 +2,29 @@ import React, { useState, useEffect } from 'react';
 import styles from './ContactModal.module.css'
 import FloatingTagInput from './FloatingTagInput'
 import FloatingTagTextArea from './FloatingTagTextArea'
+import { motion } from 'framer-motion'
+
+const backDropVariants = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: {
+        opacity: 1,
+        transition: { duration: 0.2 }
+    }
+}
+
+const modalVariants = {
+    hidden: {
+      opacity: 0,
+      y: -100,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { delay: 0.2, duration: 0.2, ease: 'easeInOut' }
+    }
+  }
 
 const ContactModal = ({ setShowContactModal }) => {
     const [form, setForm] = useState({name: '', email: '', phone: ''})
@@ -23,8 +46,19 @@ const ContactModal = ({ setShowContactModal }) => {
     }, [])
 
     return (
-        <div className={styles.backDrop}>
-            <div className={styles.modal}>
+        <motion.div
+            className={styles.backDrop}
+            variants={backDropVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+        >
+            <motion.div
+                className={styles.modal}
+                variants={modalVariants}
+                initial="hidden"
+                animate="visible"
+            >
                 <button
                     className={styles.closeBtn}
                     onClick={e => setShowContactModal(false)}
@@ -60,8 +94,8 @@ const ContactModal = ({ setShowContactModal }) => {
                     />
                     <button>Enviar</button>
                 </form>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }
  
