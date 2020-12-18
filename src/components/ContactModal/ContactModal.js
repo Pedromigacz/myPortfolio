@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import styles from './ContactModal.module.css'
 import FloatingTagInput from './FloatingTagInput'
 import FloatingTagTextArea from './FloatingTagTextArea'
+import ContactInfo from './ContactInfo'
 import { motion } from 'framer-motion'
 import { ContactContext } from '../../contexts/ContactContext'
 
@@ -95,6 +96,7 @@ const ContactModal = ({ setShowContactModal }) => {
                     />
                     <button>Enviar</button>
                 </form>
+                <ContactInfo />
             </motion.div>
         </motion.div>
     )
