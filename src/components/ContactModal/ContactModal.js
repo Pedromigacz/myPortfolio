@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styles from './ContactModal.module.css'
 import FloatingTagInput from './FloatingTagInput'
 import FloatingTagTextArea from './FloatingTagTextArea'
 import { motion } from 'framer-motion'
+import { ContactContext } from '../../contexts/ContactContext'
 
 const backDropVariants = {
     hidden: {
@@ -27,7 +28,7 @@ const modalVariants = {
   }
 
 const ContactModal = ({ setShowContactModal }) => {
-    const [form, setForm] = useState({name: '', email: '', phone: ''})
+    const { form, setForm } = useContext(ContactContext)
 
     const handleChange = e => {
         const newForm = {...form}
