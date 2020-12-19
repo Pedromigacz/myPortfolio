@@ -1,5 +1,5 @@
 import React from 'react'
-import { Home, Navbar } from '../components'
+import { Home, Navbar, AboutMe } from '../components'
 import '../styles.css'
 import ContactContextProvider from '../contexts/ContactContext'
 
@@ -8,6 +8,7 @@ const Index = () => {
     <ContactContextProvider>
       <Navbar />
       <Home />
+      <AboutMe />
     </ContactContextProvider>
   )
 }
