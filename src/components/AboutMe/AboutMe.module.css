@@ -9,7 +9,7 @@
     width: 50%;
     text-align: justify;
     line-height: 2.75rem;
-    margin: 4rem 0 0 4rem;
+    margin: 4rem 0 0 10rem;
 }
 
 .AboutMeContainer h2 strong {
@@ -25,8 +25,22 @@
     padding: 0.75rem 2rem;
     font-family: Oswald, sans-serif;
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.75rem;
     display: block;
     margin: 8px auto;
     cursor: pointer;
+}
+
+.mySkillContainer h2 {
+    display: inline-block;
+    font-family: Oswald, sans-serif;
+    font-weight: 500;
+    font-size: 4rem;
+    margin: 8rem 10rem;
+}
+
+.genericFlexContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }

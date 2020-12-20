@@ -1,0 +1,32 @@
+.skillListContainer {
+    width: 25%;
+    min-width: 340px;
+    background: #f4f4f4;
+    color: #444;
+    font-family: roboto mono, sans-serif;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+}
+
+.skillListContainer h3 {
+    display: inline-block;
+    margin: 1rem 0 0.75rem 1.5rem;
+    font-size: 2rem;
+}
+
+.skillListContainer img {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+}
+
+.skillListContainer li {
+    margin: 5px 0;
+}
+
+.skillListContainer span {
+    margin: 0 1rem;
+    vertical-align: middle;
+    text-align: justify;
+}
