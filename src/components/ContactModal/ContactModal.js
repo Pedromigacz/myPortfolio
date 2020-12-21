@@ -1,8 +1,8 @@
 import React, { useEffect, useContext } from 'react';
 import styles from './ContactModal.module.css'
-import FloatingTagInput from './FloatingTagInput'
-import FloatingTagTextArea from './FloatingTagTextArea'
-import ContactInfo from './ContactInfo'
+import FloatingTagInput from './FloatingTapInputs/FloatingTagInput'
+import FloatingTagTextArea from './FloatingTapInputs/FloatingTagTextArea'
+import ContactInfo from './ContactInfo/ContactInfo'
 import { motion } from 'framer-motion'
 import { ContactContext } from '../../contexts/ContactContext'
 
