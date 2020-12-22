@@ -33,3 +33,11 @@
     border: none;
     border-bottom: 1px solid #444;
 }
+
+@media(max-width: 1500px) {
+    .ContactInfoContainer {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+}

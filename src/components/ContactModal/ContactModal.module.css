@@ -74,3 +74,9 @@
     color: inherit;
     font-size: inherit;
 }
+
+@media(max-width: 1050px) {
+    .modal form {
+        width: 80%;
+    }
+}
