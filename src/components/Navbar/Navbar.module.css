@@ -56,4 +56,5 @@ nav.navbar hr {
 .crossed {
     color: #555;
     text-decoration: line-through;
+    cursor: default;
 }

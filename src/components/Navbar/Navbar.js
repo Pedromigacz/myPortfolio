@@ -3,6 +3,7 @@ import Logo from '../../../public/static/logo.svg'
 import ScrollIndicator from '../../../public/static/scrollIndicator.svg'
 import styles from './Navbar.module.css'
 import { AnimatePresence, motion } from 'framer-motion'
+import { Link } from 'react-scroll'
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false)
@@ -16,10 +17,10 @@ const Navbar = () => {
         <nav className={`${styles.navbar} ${scrolled && styles.scrolled}`}>
             <img src={Logo} alt="PedroMigacz"/>
             <ul>
-                <li>Home</li>
+                <li><Link to="home" spy={true} smooth={true} duration={500}>Home</Link></li>
                 <li className={styles.crossed}>Trabalhos</li>
-                <li>Sobre mim/currículo</li>
-                <li>Contato</li>
+                <li><Link to="aboutMe" spy={true} smooth={true} duration={500}>Sobre mim</Link></li>
+                <li>Currículo</li>
             </ul>
             <AnimatePresence>
                 {scrolled && <motion.hr

@@ -4,6 +4,10 @@
     font-weight: 400;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     box-sizing: inherit;

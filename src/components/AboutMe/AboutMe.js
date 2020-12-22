@@ -40,7 +40,7 @@ const AboutMe = () => {
     `)
 
     return (
-        <div className={styles.AboutMeContainer}>
+        <div className={styles.AboutMeContainer} id="aboutMe">
             <h2>Sou um desenvolvedor apaixonado em entregar, com <strong>precisão de pixels</strong>, a melhor experiência web possível a cada usuário!</h2>
             <button className={styles.curriculumButton}>Currículo</button>
             <div className={styles.mySkillContainer}>

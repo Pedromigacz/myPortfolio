@@ -3,13 +3,14 @@
 }
 
 .AboutMeContainer h2 {
+    display: inline-block;
     font-family: Roboto Mono, sans-serif;
     font-weight: 300;
     font-size: 2rem;
     width: 50%;
     text-align: justify;
     line-height: 2.75rem;
-    margin: 4rem 0 0 10rem;
+    margin: 6rem 0 0 10rem;
 }
 
 .AboutMeContainer h2 strong {
