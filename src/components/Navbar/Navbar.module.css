@@ -6,9 +6,6 @@ nav.navbar {
     flex-wrap: wrap;
     width: 100%;
     background: rgba(0, 0, 0, 0.9);
-}
-
-nav.scrolled {
     position: fixed;
 }
 
@@ -35,6 +32,8 @@ nav.navbar ul li {
 nav.navbar hr {
     width: 100%;
     height: 0;
+    background: transparent;
+    border: none;
     border-bottom: 1px solid rgba(200, 200, 200, 0.4);
 }
 

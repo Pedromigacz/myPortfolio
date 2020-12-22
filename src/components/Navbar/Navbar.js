@@ -14,12 +14,12 @@ const Navbar = () => {
     })}, [])
     return (
         <>
-        <nav className={`${styles.navbar} ${scrolled && styles.scrolled}`}>
+        <nav className={styles.navbar}>
             <img src={Logo} alt="PedroMigacz"/>
             <ul>
-                <li><Link to="home" spy={true} smooth={true} duration={500}>Home</Link></li>
+                <li><Link to="home" spy={true} smooth={true} duration={300}>Home</Link></li>
                 <li className={styles.crossed}>Trabalhos</li>
-                <li><Link to="aboutMe" spy={true} smooth={true} duration={500}>Sobre mim</Link></li>
+                <li><Link to="aboutMe" spy={true} smooth={true} duration={300}>Sobre mim</Link></li>
                 <li>Currículo</li>
             </ul>
             <AnimatePresence>
