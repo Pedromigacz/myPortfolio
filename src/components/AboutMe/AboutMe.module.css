@@ -28,7 +28,7 @@
     font-weight: 300;
     font-size: 1.75rem;
     display: block;
-    margin: 8px auto;
+    margin: 3rem auto;
     cursor: pointer;
 }
 
@@ -70,8 +70,18 @@
     }
 }
 
-@media(max-width: 472px) {
-    .AboutMeContainer h2 {
+@media(max-width: 500px) {
+    .AboutMeContainer .mySkillContainer h2 {
         margin: 6rem 2rem 0 2rem;
+    }
+
+    .AboutMeContainer h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 400px) {
+    .AboutMeContainer h2 {
+        margin: 0 2rem;
     }
 }

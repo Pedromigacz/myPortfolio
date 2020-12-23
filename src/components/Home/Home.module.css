@@ -17,3 +17,22 @@
     color: #89023E;
     font-weight: 400;
 }
+
+@media(max-width: 1050px) {
+    .homeContainer h1 {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media(max-width: 750px) {
+    .homeContainer h1 {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 400px) {
+    .homeContainer h1 {
+        font-size: 1.75rem;
+    }
+}
