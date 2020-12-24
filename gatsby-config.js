@@ -3,14 +3,12 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: process.env.BACKEND_URL || `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
         contentTypes: [`skills`],
         //If using single types place them in this array.
-        singleTypes: [`contact`],
-        // Possibility to login with a strapi user, when content types are not publically available (optional).
+        singleTypes: [`curriculum`, `contact`],
     },
   },
-  "gatsby-plugin-postcss",
   ],
 };

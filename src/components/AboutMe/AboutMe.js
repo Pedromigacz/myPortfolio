@@ -4,7 +4,7 @@ import SkillList from './SkillList.js'
 import { graphql, useStaticQuery } from 'gatsby'
 
 const AboutMe = () => {
-    const { backend, frontend, others } = useStaticQuery(graphql`
+    const { backend, frontend, others, strapiCurriculum: { curriculo } } = useStaticQuery(graphql`
     {
         backend:allStrapiSkills(filter: {category: {eq: "backEnd"}}) {
             skillList:nodes {
@@ -36,13 +36,24 @@ const AboutMe = () => {
                 }
             }
         }
+        strapiCurriculum {
+            curriculo {
+                url
+            }
+        }
     }
     `)
 
     return (
         <div className={styles.AboutMeContainer} id="aboutMe">
             <h2>Sou um desenvolvedor apaixonado em entregar, com <strong>precisão de pixels</strong>, a melhor experiência web possível a cada usuário!</h2>
-            <button className={styles.curriculumButton}>Currículo</button>
+            <button className={styles.curriculumButton}>
+                <a
+                    href={ ( process.env.BACKEND_URL || "http://localhost:1337" + curriculo[0].url)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >Currículo</a>
+            </button>
             <div className={styles.mySkillContainer}>
                 <h2>Minhas habilidades:</h2>
                 <div className={styles.genericFlexContainer}>

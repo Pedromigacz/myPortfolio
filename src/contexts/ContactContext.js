@@ -8,7 +8,7 @@ const ContactContextProvider = props => {
 
   const sendMessage = async () => {
     const res = await axios({
-      url: process.env.BACKEND_URL || 'http://localhost:1337' + '/messages',
+      url: (process.env.BACKEND_URL || 'http://localhost:1337') + '/messages',
       method: 'POST',
       data: form
     })
