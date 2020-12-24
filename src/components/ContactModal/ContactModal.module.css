@@ -75,6 +75,27 @@
     font-size: inherit;
 }
 
+.loader {
+    display: grid;
+    place-items: center;
+    width: 93px;
+    height: 52px;
+    background: #444;
+    margin: 1rem 0;
+    cursor: not-allowed;
+}
+
+.loader div {
+    width: 8px;
+    height: 8px;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+
+.feedbackContainer {
+    font-size: 15px;
+}
+
 @media(max-width: 1050px) {
     .modal form {
         width: 80%;

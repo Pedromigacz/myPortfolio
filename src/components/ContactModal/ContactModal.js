@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styles from './ContactModal.module.css'
 import FloatingTagInput from './FloatingTapInputs/FloatingTagInput'
 import FloatingTagTextArea from './FloatingTapInputs/FloatingTagTextArea'
@@ -28,8 +28,28 @@ const modalVariants = {
     }
   }
 
+const loaderVariants = {
+    rotate: {
+        x: [-10, 10],
+        y: [7, -7],
+        transition: {
+          x: {
+            yoyo: Infinity,
+            duration: 0.25
+          },
+          y: {
+            yoyo: Infinity,
+            duration: 0.125,
+            ease: "easeOut"
+          }
+        }
+    },
+}
+
 const ContactModal = ({ setShowContactModal }) => {
-    const { form, setForm } = useContext(ContactContext)
+    const { form, setForm, sendMessage } = useContext(ContactContext)
+    const [sending, setSending] = useState(false)
+    const [feedback, setFeedback] = useState('')
 
     const handleChange = e => {
         const newForm = {...form}
@@ -39,7 +59,16 @@ const ContactModal = ({ setShowContactModal }) => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        console.log(e)
+        setSending(true)
+        sendMessage()
+        .then(res => {
+            setFeedback('Sucesso! Retornarei seu contato o mais cedo possível')
+            setSending(false)
+        })
+        .catch(err => {
+            setFeedback('Falha! Por favor, tente outra via de contato')
+            setSending(false)
+        })
     }
 
     useEffect(() => {
@@ -94,7 +123,14 @@ const ContactModal = ({ setShowContactModal }) => {
                         handleChange={handleChange}
                         form={form}
                     />
-                    <button>Enviar</button>
+                    {sending ? (
+                    <span className={styles.loader}><motion.div
+                        variants={loaderVariants}
+                        animate="rotate"
+                    ></motion.div></span>
+                    ) : (<button>Enviar</button>)
+                    }
+                    {feedback && <div className={styles.feedbackContainer}>{feedback}</div>}
                 </form>
                 <ContactInfo />
             </motion.div>
