@@ -10,9 +10,10 @@ nav.navbar {
     z-index: 2;
 }
 
-nav.navbar img {
+nav.navbar img.logo {
     vertical-align: top;
     margin: 2rem 2rem 1rem 2rem;
+    width: 19rem;
     cursor: pointer;
 }
 
@@ -62,5 +63,11 @@ nav.navbar ul li.crossed {
 @media(max-width: 1056px) {
     .scrollDownIndicator {
         display: none;
+    }
+}
+
+@media(max-width: 450px) {
+    nav.navbar img.logo {
+        width: 16rem;
     }
 }

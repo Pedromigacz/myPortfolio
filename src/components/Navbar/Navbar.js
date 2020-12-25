@@ -34,7 +34,7 @@ const Navbar = () => {
     return (
         <>
         <nav className={styles.navbar}>
-            <img src={Logo} alt="PedroMigacz"/>
+            <img src={Logo} alt="PedroMigacz" className={styles.logo}/>
             {mobile ? (<BurguerNav>
                 <ul>
                     <li><Link to="home" spy={true} smooth={true} duration={300}>Home</Link></li>
