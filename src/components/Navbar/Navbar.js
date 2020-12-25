@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Logo from '../../../public/static/logo.svg'
 import ScrollIndicator from '../../../public/static/scrollIndicator.svg'
+import BurguerNav from './BurgueNav/BurguerNav'
 import styles from './Navbar.module.css'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-scroll'
@@ -8,6 +9,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false)
+    const [mobile, setMobile] = useState(false)
 
     const { strapiCurriculum: { curriculo } } = useStaticQuery(graphql`
         {
@@ -23,20 +25,39 @@ const Navbar = () => {
         if(window.scrollY !== 0) setScrolled(true)
         else setScrolled(false)
     })}, [])
+
+    useEffect(() => {
+        if(window.innerWidth <= 900) setMobile(true)
+        else setMobile(false)
+    }, [])
+
     return (
         <>
         <nav className={styles.navbar}>
             <img src={Logo} alt="PedroMigacz"/>
-            <ul>
-                <li><Link to="home" spy={true} smooth={true} duration={300}>Home</Link></li>
-                <li className={styles.crossed}>Trabalhos</li>
-                <li><Link to="aboutMe" spy={true} smooth={true} duration={300}>Sobre mim</Link></li>
-                <li><a
-                        href={ ( process.env.BACKEND_URL || "http://localhost:1337" + curriculo[0].url)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                >Currículo</a></li>
-            </ul>
+            {mobile ? (<BurguerNav>
+                <ul>
+                    <li><Link to="home" spy={true} smooth={true} duration={300}>Home</Link></li>
+                    <li className={styles.crossed}>Trabalhos</li>
+                    <li><Link to="aboutMe" spy={true} smooth={true} duration={300}>Sobre mim</Link></li>
+                    <li><a
+                            href={ ( process.env.BACKEND_URL || "http://localhost:1337" + curriculo[0].url)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                    >Currículo</a></li>
+                </ul>
+            </BurguerNav>) : (
+                <ul>
+                    <li><Link to="home" spy={true} smooth={true} duration={300}>Home</Link></li>
+                    <li className={styles.crossed}>Trabalhos</li>
+                    <li><Link to="aboutMe" spy={true} smooth={true} duration={300}>Sobre mim</Link></li>
+                    <li><a
+                            href={ ( process.env.BACKEND_URL || "http://localhost:1337" + curriculo[0].url)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                    >Currículo</a></li>
+                </ul>
+            )}
             <AnimatePresence>
                 {scrolled && <motion.hr
                     key="navRuler"
