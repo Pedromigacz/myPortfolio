@@ -58,15 +58,6 @@ const Navbar = () => {
                     >Currículo</a></li>
                 </ul>
             )}
-            <AnimatePresence>
-                {scrolled && <motion.hr
-                    key="navRuler"
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: 20, opacity: 0 }}
-                    transition={{ duration: 0.2, ease: 'easeOut'}}
-                />}
-            </AnimatePresence>
         </nav>
         <AnimatePresence>
             {!scrolled && <motion.div
