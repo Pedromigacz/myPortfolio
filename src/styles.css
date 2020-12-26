@@ -16,6 +16,7 @@ html {
     list-style: none;
     text-decoration: none;
     color: inherit;
+    outline: none;
 }
 
 body {

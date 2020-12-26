@@ -59,7 +59,7 @@ nav.navbar ul li.crossed {
 }
 
 @media(max-width: 450px) {
-    nav.navbar img.logo {
+    nav.navbar a img.logo {
         width: 16rem;
     }
 }
