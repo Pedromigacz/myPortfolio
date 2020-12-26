@@ -19,10 +19,11 @@ const BurguerNav = ({children}) => {
 
     return (
         <>
-            <div
+            <button
+                aria-label="Menu button"
                 className={styles.burguerMenu + ' ' + (open && styles.open)}
                 onClick={e => {setOpen(!open)}}
-            ><div className={styles.burguerBar}></div></div>
+            ><span className={styles.burguerBar}></span></button>
             <AnimatePresence>
                 {open && <motion.div
                     className={styles.menuContainer}

@@ -21,6 +21,8 @@ nav div.menuContainer ul li {
 /* Icon */
 
 .burguerMenu {
+    background: transparent;
+    border: none;
     width: 45px;
     height: 45px;
     position: fixed;
@@ -32,6 +34,7 @@ nav div.menuContainer ul li {
 }
 
 .burguerBar {
+    display: block;
     width: 30px;
     height: 3px;
     background-color: #f4f4f4;
@@ -42,6 +45,7 @@ nav div.menuContainer ul li {
 
 .burguerBar::before,
 .burguerBar::after {
+    display: block;
     content: '';
     position: absolute;
     width: 30px;
