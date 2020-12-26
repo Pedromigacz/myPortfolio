@@ -3,7 +3,6 @@ nav div.menuContainer {
     height: auto;
     position: fixed;
     top: 5rem;
-    z-index: 0;
     background: rgba(0, 0, 0, 0.9);
 }
 
@@ -22,7 +21,6 @@ nav div.menuContainer ul li {
 /* Icon */
 
 .burguerMenu {
-    display: inline-block;
     width: 45px;
     height: 45px;
     position: fixed;

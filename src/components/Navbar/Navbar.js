@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Logo from '../../../public/static/logo.svg'
-import ScrollIndicator from '../../../public/static/scrollIndicator.svg'
 import BurguerNav from './BurgueNav/BurguerNav'
 import styles from './Navbar.module.css'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -11,10 +9,20 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(false)
     const [mobile, setMobile] = useState(false)
 
-    const { strapiCurriculum: { curriculo } } = useStaticQuery(graphql`
+    const { strapiCurriculum: { curriculo }, logoAsset: { logo }, scrollAsset: { scrollDownIndicator } } = useStaticQuery(graphql`
         {
             strapiCurriculum {
                 curriculo {
+                    url
+                }
+            }
+            logoAsset:strapiAssets(assetName: {eq: "logo"}) {
+                logo:assetFile {
+                    url
+                }
+            }
+            scrollAsset:strapiAssets(assetName: {eq: "scrollDownIndicator"}) {
+                scrollDownIndicator:assetFile {
                     url
                 }
             }
@@ -34,7 +42,11 @@ const Navbar = () => {
     return (
         <>
         <nav className={styles.navbar}>
-            <img src={Logo} alt="PedroMigacz" className={styles.logo}/>
+            <Link to="home" spy={true} smooth={true} duration={300}><img
+                src={(process.env.BACKEND_URL || 'http://localhost:1337') + logo[0].url}
+                alt="PedroMigacz"
+                className={styles.logo}
+            /></Link>
             {mobile ? (<BurguerNav>
                 <ul>
                     <li><Link to="home" spy={true} smooth={true} duration={300}>Home</Link></li>
@@ -67,7 +79,7 @@ const Navbar = () => {
                 exit={{ opacity: 0 }}
             >
                 <span>deixa eu te mostrar</span>
-                <img src={ScrollIndicator} alt="scroll down indicator"/>
+                <img src={(process.env.BACKEND_URL || 'http://localhost:1337') + scrollDownIndicator[0].url} alt="scroll down indicator"/>
             </motion.div>}
         </AnimatePresence>
         </>
