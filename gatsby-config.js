@@ -8,7 +8,17 @@ module.exports = {
         contentTypes: [`assets`, `skills`],
         //If using single types place them in this array.
         singleTypes: [`curriculum`, `contact`],
+      },
     },
-  },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Oswald\:300,400`,
+          `Roboto Mono\:300,400,500` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
   ],
 };

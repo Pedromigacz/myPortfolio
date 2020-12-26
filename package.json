@@ -19,9 +19,8 @@
     "axios": "^0.21.1",
     "framer-motion": "^2.9.5",
     "gatsby": "^2.26.1",
-    "gatsby-plugin-postcss": "^3.3.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-source-strapi": "0.0.12",
-    "postcss": "^8.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scroll": "^1.8.1"
