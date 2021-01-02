@@ -43,7 +43,7 @@ const Navbar = () => {
         <>
         <nav className={styles.navbar}>
             <Link to="home" spy={true} smooth={true} duration={300}><img
-                src={(process.env.BACKEND_URL || 'http://localhost:1337') + logo[0].url}
+                src={(process.env.GATSBY_BACKEND_URL || 'http://localhost:1337') + logo[0].url}
                 alt="PedroMigacz"
                 className={styles.logo}
             /></Link>
@@ -53,7 +53,7 @@ const Navbar = () => {
                     <li className={styles.crossed}>Trabalhos</li>
                     <li><Link to="aboutMe" spy={true} smooth={true} duration={300}>Sobre mim</Link></li>
                     <li><a
-                            href={ ( process.env.BACKEND_URL || "http://localhost:1337" + curriculo[0].url)}
+                            href={ ( process.env.GATSBY_BACKEND_URL || "http://localhost:1337" + curriculo[0].url)}
                             target="_blank"
                             rel="noopener noreferrer"
                     >Currículo</a></li>
@@ -64,7 +64,7 @@ const Navbar = () => {
                     <li className={styles.crossed}>Trabalhos</li>
                     <li><Link to="aboutMe" spy={true} smooth={true} duration={300}>Sobre mim</Link></li>
                     <li><a
-                            href={ ( process.env.BACKEND_URL || "http://localhost:1337" + curriculo[0].url)}
+                            href={ ( process.env.GATSBY_BACKEND_URL || "http://localhost:1337" + curriculo[0].url)}
                             target="_blank"
                             rel="noopener noreferrer"
                     >Currículo</a></li>
@@ -79,7 +79,7 @@ const Navbar = () => {
                 exit={{ opacity: 0 }}
             >
                 <span>deixa eu te mostrar</span>
-                <img src={(process.env.BACKEND_URL || 'http://localhost:1337') + scrollDownIndicator[0].url} alt="scroll down indicator"/>
+                <img src={(process.env.GATSBY_BACKEND_URL || 'http://localhost:1337') + scrollDownIndicator[0].url} alt="scroll down indicator"/>
             </motion.div>}
         </AnimatePresence>
         </>
