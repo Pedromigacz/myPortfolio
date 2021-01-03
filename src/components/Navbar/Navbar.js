@@ -53,7 +53,7 @@ const Navbar = () => {
                     <li className={styles.crossed}>Trabalhos</li>
                     <li><Link to="aboutMe" spy={true} smooth={true} duration={300}>Sobre mim</Link></li>
                     <li><a
-                            href={ ( process.env.GATSBY_BACKEND_URL || "http://localhost:1337" + curriculo[0].url)}
+                            href={(process.env.GATSBY_BACKEND_URL || "http://localhost:1337") + curriculo[0].url}
                             target="_blank"
                             rel="noopener noreferrer"
                     >Currículo</a></li>
@@ -64,7 +64,7 @@ const Navbar = () => {
                     <li className={styles.crossed}>Trabalhos</li>
                     <li><Link to="aboutMe" spy={true} smooth={true} duration={300}>Sobre mim</Link></li>
                     <li><a
-                            href={ ( process.env.GATSBY_BACKEND_URL || "http://localhost:1337" + curriculo[0].url)}
+                            href={(process.env.GATSBY_BACKEND_URL || "http://localhost:1337") + curriculo[0].url}
                             target="_blank"
                             rel="noopener noreferrer"
                     >Currículo</a></li>
