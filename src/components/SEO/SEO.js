@@ -17,7 +17,7 @@ const SEO = () => {
         }
     }
     `)
-    
+
     return ( 
         <Helmet
             title={title}
@@ -66,6 +66,14 @@ const SEO = () => {
                     {
                         name: 'twitter:image',
                         content: image,
+                    },
+                    {
+                        name: 'twitter:site',
+                        content: '@pedgoshini',
+                    },
+                    {
+                        name: 'twitter:creator',
+                        content: '@pedgoshini',
                     },
                 ].concat(
                     keywords && keywords.length > 0 ? {
