@@ -73,7 +73,11 @@ const SEO = () => {
                     },
                     {
                         name: 'twitter:domain',
+<<<<<<< HEAD
                         content: 'pedromigacz.com',
+=======
+                        content: url,
+>>>>>>> 234c8bd5fb95ab07dd6b0b4cfa911f084489fd6e
                     },
                 ].concat(
                     keywords && keywords.length > 0 ? {
