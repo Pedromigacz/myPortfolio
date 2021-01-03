@@ -11,6 +11,7 @@
     text-align: justify;
     line-height: 2.75rem;
     margin: 6rem 0 0 10rem;
+    word-wrap: break-word;
 }
 
 .AboutMeContainer h2 strong {
@@ -70,7 +71,7 @@
     }
 }
 
-@media(max-width: 500px) {
+@media(max-width: 560px) {
     .AboutMeContainer .mySkillContainer h2 {
         margin: 6rem 2rem 0 2rem;
     }
@@ -80,8 +81,11 @@
     }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 420px) {
     .AboutMeContainer h2 {
         margin: 0 2rem;
+    }
+    .AboutMeContainer h2 {
+        font-size: 1.25rem;
     }
 }
