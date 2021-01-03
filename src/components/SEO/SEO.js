@@ -71,6 +71,10 @@ const SEO = () => {
                         name: 'twitter:creator',
                         content: '@pedgoshini',
                     },
+                    {
+                        name: 'twitter:domain',
+                        content: 'pedromigacz.com',
+                    },
                 ].concat(
                     keywords && keywords.length > 0 ? {
                         name: 'keywords',
