@@ -46,7 +46,7 @@ const AboutMe = () => {
 
     return (
         <div className={styles.AboutMeContainer} id="aboutMe">
-            <h2>Sou um desenvolvedor apaixonado em entregar, com <strong>precisão de pixels</strong>, a melhor experiência web possível a cada usuário!</h2>
+            <h2>Sou um desenvolvedor comprometido em entregar, com <strong>precisão de pixels</strong>, a melhor experiência web possível a cada usuário!</h2>
             <button className={styles.curriculumButton}>
                 <a
                     href={(process.env.GATSBY_BACKEND_URL || "http://localhost:1337") + curriculo[0].url}
