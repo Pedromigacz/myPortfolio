@@ -81,7 +81,7 @@
     }
 }
 
-@media(max-width: 420px) {
+@media(max-width: 450px) {
     .AboutMeContainer h2 {
         margin: 0 2rem;
     }
