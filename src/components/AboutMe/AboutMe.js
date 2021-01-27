@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 const AboutMe = () => {
     const { backend, frontend, others, strapiCurriculum: { curriculo } } = useStaticQuery(graphql`
     {
-        backend:allStrapiSkills(filter: {category: {eq: "backEnd"}}) {
+        backend:allStrapiSkills(filter: {category: {eq: "backEnd"}}, sort: {fields: priority}) {
             skillList:nodes {
                 id
                 skill
@@ -16,7 +16,7 @@ const AboutMe = () => {
                 }
             }
         }
-        frontend:allStrapiSkills(filter: {category: {eq: "frontEnd"}}) {
+        frontend:allStrapiSkills(filter: {category: {eq: "frontEnd"}}, sort: {fields: priority}) {
             skillList:nodes {
                 id
                 skill
@@ -26,7 +26,7 @@ const AboutMe = () => {
                 }
             }
         }
-        others:allStrapiSkills(filter: {category: {eq: "outros"}}) {
+        others:allStrapiSkills(filter: {category: {eq: "outros"}}, sort: {fields: priority}) {
             skillList:nodes {
                 id
                 skill
