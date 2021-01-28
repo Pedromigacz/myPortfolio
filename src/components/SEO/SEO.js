@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet'
 import { graphql, useStaticQuery } from 'gatsby'
 
 const SEO = () => {
-    const keywords = [`PedroMigacz`, `portfolio`, `web`, `desenvolvimento`, `programador`, `desenvolvedor`, `design`]
     const {site: { siteMetadata: { description, title, url, image } }} = useStaticQuery(graphql`
     {
         site {
@@ -74,12 +73,7 @@ const SEO = () => {
                         name: 'twitter:domain',
                         content: 'pedromigacz.com',
                     },
-                ].concat(
-                    keywords && keywords.length > 0 ? {
-                        name: 'keywords',
-                        content: keywords.join(', ')
-                    } : []
-                )
+                ]
             }
         />
     )

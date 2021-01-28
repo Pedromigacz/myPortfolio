@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "Portfolio de Pedro H G Migacz",
-    description: "Um site desenvolvido com intuito de ser meu portfolio (:",
+    title: "Site e portfolio de Pedro Migacz",
+    description: "Um site desenvolvido com intuito de ser um portfolio, aqui você encontra meu currículo, minhas habilidades, meus trabalho e uma maneira fácil de me contatar",
     url: "https://pedromigacz.com",
-    image: "https://pedromigacz.com/uploads/img_Metadata_4c95ce6862.bmp"
+    image: "https://api.pedromigacz.com/uploads/meta_Image_d4aa6f50eb.png"
   },
   plugins: [
     {
