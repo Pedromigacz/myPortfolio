@@ -25,26 +25,32 @@ const SEO = () => {
                         name: 'description',
                         content: description,
                     },
+                    // Facebook open graph
                     {
-                        property: 'og:title',
-                        content: title,
-                    },
-                    {
-                        property: 'og:description',
-                        content: description,
+                        property: 'fb:app_id',
+                        content: '880823279352753',
                     },
                     {
                         property: 'og:type',
                         content: 'website',
                     },
                     {
+                        property: 'og:url',
+                        content: url,
+                    },
+                    {
+                        property: 'og:title',
+                        content: title,
+                    },
+                    {
                         property: 'og:image',
                         content: image,
                     },
                     {
-                        property: 'og:url',
-                        content: url,
+                        property: 'og:description',
+                        content: description,
                     },
+                    // Twitter crawler stuff
                     {
                         name: 'twitter:card',
                         content: "summary_large_image",
