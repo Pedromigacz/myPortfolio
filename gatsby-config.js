@@ -6,6 +6,7 @@ module.exports = {
     image: "https://api.pedromigacz.com/uploads/meta_Image_d4aa6f50eb.png"
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-source-strapi`,
       options: {
