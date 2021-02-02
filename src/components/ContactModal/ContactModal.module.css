@@ -52,6 +52,10 @@
     display: block;
 }
 
+.formRow {
+    height: fit-content;
+}
+
 .inputContainer label {
     display: inline-block;
     margin-left: 5px;
@@ -99,5 +103,13 @@
 @media(max-width: 1050px) {
     .modal form {
         width: 80%;
+    }
+}
+
+
+@media(max-height: 740px) {
+    .inputContainer input,
+    .inputContainer textarea {
+        font-size: 0.8rem;
     }
 }

@@ -41,3 +41,11 @@
         width: 100%;
     }
 }
+
+@media(max-height: 650px) {
+    .ContactInfoContainer {
+        font-size: 1.4rem;
+        margin: 0 auto 1rem auto;
+    }
+
+}

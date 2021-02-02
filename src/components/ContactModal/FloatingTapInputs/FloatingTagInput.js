@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const FloatingTagInput = ({styles, label, inputKey, handleChange, form}) => {
     const [labelFocused, setLabelFocused] = useState(false)
     return (
-        <span className={styles.inputContainer}>
+        <span className={styles.inputContainer + ' ' + styles.formRow}>
             <motion.label
                 initial={{ y: 32 }}
                 animate={{ y: (form[inputKey] || labelFocused) ? 10 : 32 }}
